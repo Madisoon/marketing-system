@@ -1,12 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {MatCardModule} from '@angular/material';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { GoodTextComponent } from './good-text/good-text.component';
-import { NewProductComponent } from './new-product/new-product.component';
-import { PraiseListComponent } from './praise-list/praise-list.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
+import {GoodTextComponent} from './good-text/good-text.component';
+import {NewProductComponent} from './new-product/new-product.component';
+import {PraiseListComponent} from './praise-list/praise-list.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,15 @@ import { PraiseListComponent } from './praise-list/praise-list.component';
     HomeComponent,
     GoodTextComponent,
     NewProductComponent,
-    PraiseListComponent
+    PraiseListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

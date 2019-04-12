@@ -1,6 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {MatCardModule} from '@angular/material';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatIconModule} from '@angular/material/icon';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -20,7 +22,9 @@ import {PraiseListComponent} from './praise-list/praise-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

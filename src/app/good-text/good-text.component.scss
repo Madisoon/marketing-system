@@ -1,0 +1,57 @@
+.good-text-html {
+  padding: 0 8px;
+
+  .list {
+    display: flex;
+
+    .left, .right {
+      flex: 1;
+      height: 100px;
+
+      .text {
+        margin-top: 5px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+
+        img {
+          height: 230px;
+          width: 100%;
+        }
+
+        .title {
+          padding: 10px 10px 0 10px;
+          position: relative;
+          line-height: 150%;
+        }
+
+        .detail {
+          padding: 10px;
+          line-height: 25px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+          }
+
+          .author {
+            flex: 1;
+            margin-left: 5px;
+          }
+
+          .good {
+            color: rgba(0, 0, 0, .4);
+          }
+        }
+      }
+    }
+
+    .right {
+      margin-left: 10px;
+      flex: 1;
+      height: 100px;
+    }
+  }
+}

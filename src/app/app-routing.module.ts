@@ -7,8 +7,8 @@ import {PraiseListComponent} from './praise-list/praise-list.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'goodText', component: GoodTextComponent},
   {path: 'newProduct', component: NewProductComponent},
+  {path: 'goodText', component: GoodTextComponent},
   {path: 'praiseList', component: PraiseListComponent}
 ];
 

@@ -21,7 +21,7 @@ time, mark, audio, video {
   font: {
     size: 12px;
     /*苹果官网字体*/
-    family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
   vertical-align: baseline;
 }
@@ -74,7 +74,6 @@ textarea {
 }
 
 a, a:hover, a:visited, a:link, a:active {
-  // 做到只设置一次，就可以使所有a标签的四种状态都和本身颜色保持一致，样式代码该怎么写
   text-decoration: none;
   color: #333;
 }

@@ -10,6 +10,7 @@ import {HomeComponent} from './home/home.component';
 import {GoodTextComponent} from './good-text/good-text.component';
 import {NewProductComponent} from './new-product/new-product.component';
 import {PraiseListComponent} from './praise-list/praise-list.component';
+import { ErrorComponent } from './common/error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {PraiseListComponent} from './praise-list/praise-list.component';
     GoodTextComponent,
     NewProductComponent,
     PraiseListComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

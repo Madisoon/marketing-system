@@ -9,7 +9,11 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'newProduct', component: NewProductComponent},
   {path: 'goodText', component: GoodTextComponent},
-  {path: 'praiseList', component: PraiseListComponent}
+  {path: 'praiseList', component: PraiseListComponent},
+  /*默认路由*/
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  /*404路由*/
+  {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({

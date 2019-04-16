@@ -6,13 +6,13 @@
 
     .left, .right {
       flex: 1;
-      height: 100px;
 
       .text {
         margin-top: 5px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
         border-radius: 4px;
-
+        background-color: white;
+        
         img {
           height: 230px;
           width: 100%;
@@ -50,8 +50,6 @@
 
     .right {
       margin-left: 10px;
-      flex: 1;
-      height: 100px;
     }
   }
 }

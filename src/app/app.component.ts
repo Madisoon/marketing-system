@@ -13,15 +13,22 @@ export class AppComponent {
     routing: '/home'
   }, {
     name: '新品',
-    status: true,
-    routing: '/home'
+    status: false,
+    routing: '/newProduct'
   }, {
     name: '好评榜',
-    status: true,
-    routing: '/home'
+    status: false,
+    routing: '/praiseList'
   }, {
     name: '好文',
-    status: true,
-    routing: '/home'
+    status: false,
+    routing: '/goodText'
   }];
+
+  changeMenuStatus(data) {
+    this.menuData.forEach((item) => {
+      item.status = false;
+    });
+    data.status = true;
+  }
 }

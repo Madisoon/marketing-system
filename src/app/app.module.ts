@@ -11,6 +11,9 @@ import {GoodTextComponent} from './good-text/good-text.component';
 import {NewProductComponent} from './new-product/new-product.component';
 import {PraiseListComponent} from './praise-list/praise-list.component';
 import { ErrorComponent } from './common/error/error.component';
+import { GoodTextDetailComponent } from './good-text/good-text-detail/good-text-detail.component';
+import { PraiseListDetailComponent } from './praise-list/praise-list-detail/praise-list-detail.component';
+import { NewProductDetailComponent } from './new-product/new-product-detail/new-product-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { ErrorComponent } from './common/error/error.component';
     NewProductComponent,
     PraiseListComponent,
     ErrorComponent,
+    GoodTextDetailComponent,
+    PraiseListDetailComponent,
+    NewProductDetailComponent,
   ],
   imports: [
     BrowserModule,

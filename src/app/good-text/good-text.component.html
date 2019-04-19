@@ -1,76 +1,34 @@
 <div class="good-text-html">
   <div class="list">
     <ul class="left">
-      <li class="text html-cursor">
-        <img src="assets/img/1.jpg" alt="">
+      <li class="text html-cursor" *ngFor="let item of goodTextData">
+        <img class="thumbnail" [src]="item['img']" alt="">
         <div class="title">
-          <h3>卷妈碎碎念|当妈之后的顿悟分享给你们卷妈碎碎念|
-            当妈之后的顿悟分享给你们卷妈碎碎念</h3>
+          <h3>{{item['title']}}</h3>
         </div>
         <div class="detail">
-          <img src="assets/img/header.png" alt="">
-          <div class="author">Madisoon</div>
-          <div class="good">233</div>
-        </div>
-      </li>
-      <li class="text html-cursor">
-        <img src="assets/img/2.jpg" alt="">
-        <div class="title">
-          <h3>卷妈碎碎念|当妈之后的顿悟分享给你们卷妈碎碎念|
-            当妈之后的顿悟分享给你们卷妈碎碎念</h3>
-        </div>
-        <div class="detail">
-          <img src="assets/img/2.jpg" alt="">
-          <div class="author">Madisoon</div>
-          <div class="good">233</div>
-        </div>
-      </li>
-      <li class="text html-cursor">
-        <img src="assets/img/3.jpg" alt="">
-        <div class="title">
-          <h3>卷妈碎碎念|当妈之后的顿悟分享给你们卷妈碎碎念|
-            当妈之后的顿悟分享给你们卷妈碎碎念</h3>
-        </div>
-        <div class="detail">
-          <img src="assets/img/3.jpg" alt="">
-          <div class="author">Madisoon</div>
-          <div class="good">233</div>
+          <img [src]="item['header']" alt="">
+          <div class="author">{{item['author']}}</div>
+          <div class="good">
+            <mat-icon class="icon">favorite_border</mat-icon>
+            <label for="">{{item['good']}}</label>
+          </div>
         </div>
       </li>
     </ul>
     <ul class="right">
-      <li class="text html-cursor">
-        <img src="assets/img/1.jpg" alt="">
+      <li class="text html-cursor" *ngFor="let item of goodTextRightData">
+        <img class="thumbnail" [src]="item['img']" alt="">
         <div class="title">
-          <h3>卷妈碎碎念</h3>
+          <h3>{{item['title']}}</h3>
         </div>
         <div class="detail">
-          <img src="assets/img/1.jpg" alt="">
-          <div class="author">Madisoon</div>
-          <div class="good">233</div>
-        </div>
-      </li>
-      <li class="text html-cursor">
-        <img src="../../assets/img/2.jpg" alt="">
-        <div class="title">
-          <h3>卷妈碎碎念|当妈之后的顿悟分享给你们卷妈碎碎念|
-            当妈之后的顿悟分享给你们卷妈碎碎念</h3>
-        </div>
-        <div class="detail">
-          <img src="assets/img/header.png" alt="">
-          <div class="author">Madisoon</div>
-          <div class="good">233</div>
-        </div>
-      </li>
-      <li class="text html-cursor">
-        <img src="assets/img/3.jpg" alt="">
-        <div class="title">
-          <h3>卷妈碎碎念卷妈碎碎念</h3>
-        </div>
-        <div class="detail">
-          <img src="assets/img/3.jpg" alt="">
-          <div class="author">Madisoon</div>
-          <div class="good">233</div>
+          <img [src]="item['header']" alt="">
+          <div class="author">{{item['author']}}</div>
+          <div class="good">
+            <mat-icon class="icon">favorite_border</mat-icon>
+            <label for="">{{item['good']}}</label>
+          </div>
         </div>
       </li>
     </ul>

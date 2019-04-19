@@ -6,60 +6,30 @@
   </ul>
   <div class="praise">
     <div class="left">
-      <div class="content">
-        <img src="assets/img/p30.jpg" alt="">
+      <div class="content" *ngFor="let item of praiseListData">
+        <img [src]="item['img']" alt="">
         <div class="detail">
-          <div class="title">万斯经典情侣vans帆布鞋</div>
-          <div class="address" *ngIf="true">中国香港品牌</div>
-          <div class="activity" *ngIf="true">
-            <a> 满300减10 </a>
+          <div class="title">{{item.title}}</div>
+          <div class="address" *ngIf="item.address !== ''">{{item.address}}</div>
+          <div class="activity" *ngIf="item.activity !== ''">
+            <a> {{item.activity}} </a>
           </div>
-          <div class="price">¥ <span>399</span></div>
-          <div class="favor">收藏587次</div>
-        </div>
-      </div>
-      <div class="content">
-        <img src="assets/img/p30.jpg" alt="">
-        <div class="detail">
-          <div class="title">万斯经典情侣vans帆布鞋</div>
-          <div class="address" *ngIf="false"></div>
-          <div class="activity" *ngIf="false"></div>
-          <div class="price">¥ <span>199</span></div>
-          <div class="favor">收藏587次</div>
-        </div>
-      </div>
-      <div class="content">
-        <img src="assets/img/p30.jpg" alt="">
-        <div class="detail">
-          <div class="title">万斯经典情侣vans帆布鞋</div>
-          <div class="address" *ngIf="false"></div>
-          <div class="activity" *ngIf="false"></div>
-          <div class="price">¥ <span>699</span></div>
-          <div class="favor">收藏587次</div>
+          <div class="price">¥ <span>{{item.price}}</span></div>
+          <div class="favor">收藏{{item.good}}次</div>
         </div>
       </div>
     </div>
     <div class="right">
-      <div class="content">
-        <img src="assets/img/p30.jpg" alt="">
+      <div class="content" *ngFor="let item of praiseListData">
+        <img [src]="item['img']" alt="">
         <div class="detail">
-          <div class="title">万斯经典情侣vans帆布鞋</div>
-          <div class="address" *ngIf="false"></div>
-          <div class="activity" *ngIf="false"></div>
-          <div class="price">¥ <span>6534</span></div>
-          <div class="favor">收藏587次</div>
-        </div>
-      </div>
-      <div class="content">
-        <img src="assets/img/p30.jpg" alt="">
-        <div class="detail">
-          <div class="title">星巴克猫爪咖啡杯</div>
-          <div class="address" *ngIf="true">美国品牌</div>
-          <div class="activity" *ngIf="true">
-            <a>限量发售</a>
+          <div class="title">{{item.title}}</div>
+          <div class="address" *ngIf="item.address !== ''">{{item.address}}</div>
+          <div class="activity" *ngIf="item.activity !== ''">
+            <a> {{item.activity}} </a>
           </div>
-          <div class="price">¥ <span>4532</span></div>
-          <div class="favor">收藏587次</div>
+          <div class="price">¥ <span>{{item.price}}</span></div>
+          <div class="favor">收藏{{item.good}}次</div>
         </div>
       </div>
     </div>

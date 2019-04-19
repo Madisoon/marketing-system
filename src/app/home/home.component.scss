@@ -8,7 +8,12 @@
 
   .swiper-container {
     width: 100%;
-    height: 180px
+    height: 180px;
+
+    .swiper-button-next, .swiper-button-prev {
+      width: 25px !important;
+      height: 25px !important;
+    }
   }
 
   .swiper-slide {

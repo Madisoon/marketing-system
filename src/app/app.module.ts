@@ -3,17 +3,18 @@ import {NgModule} from '@angular/core';
 import {MatCardModule} from '@angular/material';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
-
+import {MatDialogModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {GoodTextComponent} from './good-text/good-text.component';
 import {NewProductComponent} from './new-product/new-product.component';
 import {PraiseListComponent} from './praise-list/praise-list.component';
-import { ErrorComponent } from './common/error/error.component';
-import { GoodTextDetailComponent } from './good-text/good-text-detail/good-text-detail.component';
-import { PraiseListDetailComponent } from './praise-list/praise-list-detail/praise-list-detail.component';
-import { NewProductDetailComponent } from './new-product/new-product-detail/new-product-detail.component';
+import {ErrorComponent} from './common/error/error.component';
+import {GoodTextDetailComponent} from './good-text/good-text-detail/good-text-detail.component';
+import {PraiseListDetailComponent} from './praise-list/praise-list-detail/praise-list-detail.component';
+import {NewProductDetailComponent} from './new-product/new-product-detail/new-product-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,11 @@ import { NewProductDetailComponent } from './new-product/new-product-detail/new-
     AppRoutingModule,
     MatCardModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
+  entryComponents: [NewProductDetailComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

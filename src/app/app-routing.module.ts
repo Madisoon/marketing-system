@@ -7,7 +7,10 @@ import {PraiseListComponent} from './praise-list/praise-list.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'newProduct', component: NewProductComponent},
+  {
+    path: 'newProduct', component: NewProductComponent, children:
+      []
+  },
   {path: 'goodText', component: GoodTextComponent},
   {path: 'praiseList', component: PraiseListComponent},
   /*默认路由*/

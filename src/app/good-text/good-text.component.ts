@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {GoodTextService} from './good-text.service';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-good-text',
@@ -6,12 +8,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./good-text.component.scss']
 })
 export class GoodTextComponent implements OnInit {
-
   goodTextData: any;
 
   goodTextRightData: any;
 
-  constructor() {
+  constructor(private goodTextService: GoodTextService) {
     this.goodTextData = [{
       img: 'assets/img/good2.png',
       title: 'NINEKA南卡无线充电宝，真心赞👍！高颜值，而且迷你好用的充电宝推荐！',
@@ -78,6 +79,17 @@ export class GoodTextComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.listData();
+  }
+
+  public listData() {
+    this.goodTextService.listGoodText().then(rep => {
+      console.log(rep);
+      // @ts-ignore
+      rep.forEach(item => console.log(1));
+    }).catch(rep => {
+      console.log(rep);
+    });
   }
 
 }

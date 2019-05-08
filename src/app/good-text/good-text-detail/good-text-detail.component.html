@@ -1,3 +1,35 @@
-<p>
-  good-text-detail works!
-</p>
+<div class="good-text-detail">
+  <div class="person">
+    <mat-icon class="icon" (click)="backPage()">keyboard_arrow_left</mat-icon>
+    <img [src]="goodTextDetail['header']" alt="">
+    <span>{{goodTextDetail['author']}}</span>
+  </div>
+  <div class="img-show">
+    <div class="swiper-container gallery-top">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of (goodTextDetail['contentImg'].split(','))">
+          <img [src]="item" alt="">
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next swiper-button-white"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of (goodTextDetail['contentImg'].split(','))">
+          <img [src]="item" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h2>{{goodTextDetail['title']}}</h2>
+    <p>{{goodTextDetail['content']}}</p>
+  </div>
+
+  <div class="good">
+    <mat-icon class="icon" (click)="clickLike(goodTextDetail['id'])">favorite_border</mat-icon>
+    <label for="">{{goodTextDetail['good']}}</label>
+  </div>
+</div>

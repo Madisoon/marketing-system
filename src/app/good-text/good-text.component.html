@@ -1,36 +1,3 @@
 <div class="good-text-html">
-  <div class="list">
-    <ul class="left">
-      <li class="text html-cursor" *ngFor="let item of goodTextData">
-        <img class="thumbnail" [src]="item['img']" alt="">
-        <div class="title">
-          <h3>{{item['title']}}</h3>
-        </div>
-        <div class="detail">
-          <img [src]="item['header']" alt="">
-          <div class="author">{{item['author']}}</div>
-          <div class="good">
-            <mat-icon class="icon">favorite_border</mat-icon>
-            <label for="">{{item['good']}}</label>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <ul class="right">
-      <li class="text html-cursor" *ngFor="let item of goodTextRightData">
-        <img class="thumbnail" [src]="item['img']" alt="">
-        <div class="title">
-          <h3>{{item['title']}}</h3>
-        </div>
-        <div class="detail">
-          <img [src]="item['header']" alt="">
-          <div class="author">{{item['author']}}</div>
-          <div class="good">
-            <mat-icon class="icon">favorite_border</mat-icon>
-            <label for="">{{item['good']}}</label>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <router-outlet></router-outlet>
 </div>

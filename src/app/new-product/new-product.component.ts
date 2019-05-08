@@ -7,22 +7,12 @@ import {NewProductDetailComponent} from './new-product-detail/new-product-detail
   templateUrl: './new-product.component.html',
   styleUrls: ['./new-product.component.scss']
 })
-export class NewProductComponent implements OnInit, AfterViewInit {
+export class NewProductComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {
   }
 
   ngOnInit() {
-  }
-
-  ngAfterViewInit(): void {
-  }
-
-  openDetail() {
-    const dialogRef = this.dialog.open(NewProductDetailComponent, {
-      height: '1000px',
-      width: '1500px',
-    });
   }
 
 }

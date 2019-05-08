@@ -1,3 +1,31 @@
 .new-product-detail {
-  
+  padding: 0 8px;
+
+  h4 {
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  .source {
+    margin-top: 10px;
+    display: flex;
+    color: rgba(0, 0, 0, .4);
+
+    .nickName {
+      flex: 1;
+      margin-left: 10px;
+    }
+  }
+
+  .content {
+    margin-top: 10px;
+    line-height: 170%;
+  }
+
+  .show {
+    img {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
 }

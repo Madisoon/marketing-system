@@ -13,4 +13,14 @@ export class GoodTextService {
     return new Promise((resolve, reject) => this.httpClient.get('http://localhost:8083/marketing/listGoodText')
       .subscribe(resolve, reject));
   }
+
+  public getGoodTextDetail(id) {
+    return new Promise((resolve, reject) => this.httpClient.get('http://localhost:8083/marketing/listGoodText?id=' + id)
+      .subscribe(resolve, reject));
+  }
+
+  public clickLike(goodTextId) {
+    return new Promise((resolve, reject) => this.httpClient.post('http://localhost:8083/marketing/clickLike', {id: goodTextId})
+      .subscribe(resolve, reject));
+  }
 }

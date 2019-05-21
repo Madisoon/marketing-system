@@ -1,0 +1,85 @@
+.praise-table-html {
+  .type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px 12px 8px;
+    border-bottom: 1px solid #f8f6f2;
+
+    .active {
+      color: #0096ff;
+    }
+  }
+
+  .praise {
+    display: flex;
+    padding: 0 12px 5px 12px;
+    background-color: #eeeeee;
+
+    .left, .right {
+      flex: 1;
+
+      .content {
+        margin-top: 8px;
+        border: 1px solid #f8f6f2;
+        border-radius: 4px;
+        background-color: white;
+
+        img {
+          height: 180px;
+          width: 100%;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+        }
+
+        .detail {
+          padding: 10px 10px;
+
+          .title {
+            font-size: 1.2rem;
+            line-height: 150%;
+          }
+
+          .address {
+            margin-top: 10px;
+            font-size: .9rem;
+            color: rgba(0, 0, 0, .4);
+          }
+
+          .activity {
+            margin-top: 10px;
+
+            a {
+              padding: 0 2px;
+              border-radius: 2px;
+              border: 1px solid #ff1744;
+              font-size: .7rem;
+              color: #ff1744;
+            }
+          }
+
+          .price {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #c62828;
+
+            span {
+              font-size: 1.2rem;
+            }
+          }
+
+          .favor {
+            margin-top: 10px;
+            font-size: .9rem;
+            color: rgba(0, 0, 0, .4);
+          }
+
+        }
+      }
+    }
+
+    .right {
+      margin-left: 10px;
+    }
+  }
+}

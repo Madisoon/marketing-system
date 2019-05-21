@@ -1,0 +1,24 @@
+<div class="new-product-html">
+  <router-outlet>
+  </router-outlet>
+  <ul class="list">
+    <li class="content" *ngFor="let item of newProduct" (click)="navGoodTextDetail(item)">
+      <img [src]="item['newCover']" alt="">
+      <div class="title">
+        {{item['title']}}
+      </div>
+      <div class="detail">
+        <div class="type" (click)="openDetail()">
+          手机
+        </div>
+        <div class="time">
+          {{item['releaseTime'] | date:'yyyy-MM-dd HH:mm:ss'}}
+        </div>
+        <div class="eye">
+          <mat-icon class="eye-icon">remove_red_eye</mat-icon>
+          <span>{{item['eye']}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

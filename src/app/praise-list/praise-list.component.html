@@ -1,37 +1,3 @@
 <div class="praise-list-html">
-  <ul class="type">
-    <li class="" *ngFor="let item of secondMenu" (click)="changeMenuStatus(item)">
-      <a [ngClass]="{active: item.status}">{{item.name}}</a>
-    </li>
-  </ul>
-  <div class="praise">
-    <div class="left">
-      <div class="content" *ngFor="let item of praiseListData">
-        <img [src]="item['img']" alt="">
-        <div class="detail">
-          <div class="title">{{item.title}}</div>
-          <div class="address" *ngIf="item.address !== ''">{{item.address}}</div>
-          <div class="activity" *ngIf="item.activity !== ''">
-            <a> {{item.activity}} </a>
-          </div>
-          <div class="price">¥ <span>{{item.price}}</span></div>
-          <div class="favor">收藏{{item.good}}次</div>
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <div class="content" *ngFor="let item of praiseListData">
-        <img [src]="item['img']" alt="">
-        <div class="detail">
-          <div class="title">{{item.title}}</div>
-          <div class="address" *ngIf="item.address !== ''">{{item.address}}</div>
-          <div class="activity" *ngIf="item.activity !== ''">
-            <a> {{item.activity}} </a>
-          </div>
-          <div class="price">¥ <span>{{item.price}}</span></div>
-          <div class="favor">收藏{{item.good}}次</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>

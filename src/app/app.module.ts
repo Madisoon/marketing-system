@@ -10,17 +10,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
-import {PraiseListComponent} from './praise-list/praise-list.component';
 import {ErrorComponent} from './common/error/error.component';
-import {PraiseListDetailComponent} from './praise-list/praise-list-detail/praise-list-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PraiseListComponent,
     ErrorComponent,
-    PraiseListDetailComponent,
   ],
   imports: [
     HttpClientModule,

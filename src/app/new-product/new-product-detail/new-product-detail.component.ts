@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-new-product-detail',
@@ -7,11 +7,14 @@ import {Router} from '@angular/router';
   styleUrls: ['./new-product-detail.component.scss']
 })
 export class NewProductDetailComponent implements OnInit {
+  newProductDetail: object;
 
-  constructor(private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
+    const valueName = 'value';
+    this.newProductDetail = JSON.parse(this.activatedRoute.params[valueName].data);
   }
 
   backPage() {

@@ -19,8 +19,8 @@ export class HomeService {
       .subscribe(resolve, reject));
   }
 
-  listNewProductByFrequency() {
-    return new Promise((resolve, reject) => this.httpClient.get('http://localhost:8083/marketing/listNewProductByFrequency')
+  listPraiseListByFrequency() {
+    return new Promise((resolve, reject) => this.httpClient.get('http://localhost:8083/marketing/listPraiseListByFrequency')
       .subscribe(resolve, reject));
   }
 }

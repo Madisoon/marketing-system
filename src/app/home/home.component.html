@@ -19,32 +19,54 @@
     </div>
     <ul class="product-list">
       <li class="information" *ngFor="let item of recommendedProduct">
-        <img [src]="item['img']" alt="">
+        <img [src]="item['praiseCover']" alt="">
         <div class="detail">
           <div class="title">{{item['title']}}</div>
-          <div class="price">{{item['price']}}</div>
+          <div class="price">{{item['price']}}元</div>
           <div class="source">
-            <div>{{item['source']}} | {{item['time']}}</div>
+            <div>{{item['source']}} | {{item['gmtCreate'] | date:'HH:mm'}}</div>
           </div>
         </div>
       </li>
     </ul>
   </div>
-  <div class="praise">
+  <div class="good-text">
     <div class="main-title">
       商品体验
     </div>
-    <ul class="product-list">
-      <li class="information" *ngFor="let item of recommendedProduct">
-        <img [src]="item['img']" alt="">
-        <div class="detail">
-          <div class="title">{{item['title']}}</div>
-          <div class="price">{{item['price']}}</div>
-          <div class="source">
-            <div>{{item['source']}} | {{item['time']}}</div>
+    <div class="list">
+      <ul class="left">
+        <li class="text html-cursor" *ngFor="let item of goodTextData" (click)="navGoodTextDetail(item)">
+          <img class="thumbnail" [src]="item['articleCover']" alt="">
+          <div class="title">
+            <h3>{{item['title']}}</h3>
           </div>
-        </div>
-      </li>
-    </ul>
+          <div class="detail">
+            <img [src]="item['header']" alt="">
+            <div class="author">{{item['author']}}</div>
+            <div class="good">
+              <mat-icon class="icon">favorite_border</mat-icon>
+              <label for="">{{item['good']}}</label>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="right">
+        <li class="text html-cursor" *ngFor="let item of goodTextRightData" (click)="navGoodTextDetail(item)">
+          <img class="thumbnail" [src]="item['articleCover']" alt="">
+          <div class="title">
+            <h3>{{item['title']}}</h3>
+          </div>
+          <div class="detail">
+            <img [src]="item['header']" alt="">
+            <div class="author">{{item['author']}}</div>
+            <div class="good">
+              <mat-icon class="icon">favorite_border</mat-icon>
+              <label for="">{{item['good']}}</label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

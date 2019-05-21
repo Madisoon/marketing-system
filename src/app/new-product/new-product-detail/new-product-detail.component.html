@@ -7,17 +7,18 @@
     {{newProductDetail['title']}}
   </h4>
   <div class="source">
-    <div class="name">三星官方</div>
+    <div class="name">主讲</div>
     <div class="nickName">{{newProductDetail['presenter']}}</div>
     <div class="time">发售：{{newProductDetail['releaseTime'] | date:'yyyy-MM-dd HH:mm:ss'}}</div>
   </div>
   <div class="url">
-    <div class="name">地址：{{newProductDetail['url']}}</div>
+    <div class="name">地址：
+      <a [href]="newProductDetail['url']">{{newProductDetail['url']}}</a>
+    </div>
+    <div class="content">
+      {{newProductDetail['content']}}
+    </div>
+    <div class="show">
+      <img *ngFor="let item of (newProductDetail['productGallery'].split(','))" [src]="item" alt="">
+    </div>
   </div>
-  <div class="content">
-    {{newProductDetail['content']}}
-  </div>
-  <div class="show">
-    <img *ngFor="let item of (newProductDetail['productGallery'].split(','))" [src]="item" alt="">
-  </div>
-</div>

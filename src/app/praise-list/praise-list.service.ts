@@ -9,8 +9,12 @@ export class PraiseListService {
   constructor(private httpClient: HttpClient) {
   }
 
-  listPraiseList() {
-    return new Promise((resolve, reject) => this.httpClient.get('http://localhost:8083/marketing/listPraiseList')
+  listPraiseList(type) {
+    return new Promise((resolve, reject) => this.httpClient.get('http://localhost:8083/marketing/listPraiseList', {
+      params: {
+        type,
+      }
+    })
       .subscribe(resolve, reject));
   }
 }

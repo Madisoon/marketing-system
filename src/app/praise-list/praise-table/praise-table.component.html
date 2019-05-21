@@ -6,12 +6,12 @@
   </ul>
   <div class="praise">
     <div class="left">
-      <div class="content" *ngFor="let item of praiseListData">
-        <img [src]="item['img']" alt="">
+      <div class="content" *ngFor="let item of praiseListLeftData">
+        <img [src]="item['praiseCover']" alt="">
         <div class="detail">
           <div class="title">{{item.title}}</div>
-          <div class="address" *ngIf="item.address !== ''">{{item.address}}</div>
-          <div class="activity" *ngIf="item.activity !== ''">
+          <div class="address" *ngIf="item.address">{{item.address}}</div>
+          <div class="activity" *ngIf="item.activity">
             <a> {{item.activity}} </a>
           </div>
           <div class="price">¥ <span>{{item.price}}</span></div>
@@ -20,12 +20,12 @@
       </div>
     </div>
     <div class="right">
-      <div class="content" *ngFor="let item of praiseListData">
-        <img [src]="item['img']" alt="">
+      <div class="content" *ngFor="let item of praiseListRightData">
+        <img [src]="item['praiseCover']" alt="">
         <div class="detail">
           <div class="title">{{item.title}}</div>
-          <div class="address" *ngIf="item.address !== ''">{{item.address}}</div>
-          <div class="activity" *ngIf="item.activity !== ''">
+          <div class="address" *ngIf="item.address">{{item.address}}</div>
+          <div class="activity" *ngIf="item.activity">
             <a> {{item.activity}} </a>
           </div>
           <div class="price">¥ <span>{{item.price}}</span></div>

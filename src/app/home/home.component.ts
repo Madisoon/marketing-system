@@ -1,4 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {HomeService} from './home.service';
+import {Router} from '@angular/router';
 
 declare const Swiper: any;
 
@@ -11,7 +13,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   carousel;
   recommendedProduct: any;
 
-  constructor() {
+  carouselProduct: any;
+
+  constructor(private router: Router, private homeService: HomeService) {
     this.recommendedProduct = [
       {
         img: 'assets/img/1.jpg',
@@ -59,7 +63,35 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.listNewTopByTime();
+  }
 
+  ngAfterViewInit(): void {
+    this.carouselLoad();
+    this.listGoodTextByGood();
+    this.listNewProductByFrequency();
+  }
+
+  goNewProductDetail(data) {
+    this.router.navigate(['/newProduct/detail', {data: JSON.stringify(data)}]);
+  }
+
+  listNewTopByTime() {
+    this.homeService.listNewTopByTime().then((rep) => {
+      this.carouselProduct = rep;
+    });
+  }
+
+  listGoodTextByGood() {
+    this.homeService.listGoodTextByGood().then((rep) => {
+      console.log(rep);
+    });
+  }
+
+  listNewProductByFrequency() {
+    this.homeService.listNewProductByFrequency().then((rep) => {
+      console.log(rep);
+    });
   }
 
   carouselLoad() {
@@ -74,9 +106,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
       observer: true,
       observeParents: true,
     });
-  }
-
-  ngAfterViewInit(): void {
-    this.carouselLoad();
   }
 }

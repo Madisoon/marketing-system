@@ -29,8 +29,6 @@ export class GoodTextListComponent implements OnInit {
           this.goodTextRightData.push(item);
         }
       });
-      /*const attributesData = 'data';
-      rep.forEach(item => console.log(1));*/
     }).catch(rep => {
       console.log(rep);
     });

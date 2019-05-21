@@ -3,14 +3,8 @@
   <div class="carousel-map">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="assets/img/1.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/img/2.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/img/3.jpg" alt="">
+        <div class="swiper-slide" *ngFor="let item of carouselProduct" (click)="goNewProductDetail(item)">
+          <img [src]="item['newCover']" alt="">
         </div>
       </div>
       <!-- Add Arrows -->
@@ -19,16 +13,38 @@
     </div>
   </div>
   <!-- 商品列表-->
-  <ul class="product-list">
-    <li class="information" *ngFor="let item of recommendedProduct">
-      <img [src]="item['img']" alt="">
-      <div class="detail">
-        <div class="title">{{item['title']}}</div>
-        <div class="price">{{item['price']}}</div>
-        <div class="source">
-          <div>{{item['source']}} | {{item['time']}}</div>
+  <div class="praise">
+    <div class="main-title">
+      推荐商品
+    </div>
+    <ul class="product-list">
+      <li class="information" *ngFor="let item of recommendedProduct">
+        <img [src]="item['img']" alt="">
+        <div class="detail">
+          <div class="title">{{item['title']}}</div>
+          <div class="price">{{item['price']}}</div>
+          <div class="source">
+            <div>{{item['source']}} | {{item['time']}}</div>
+          </div>
         </div>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="praise">
+    <div class="main-title">
+      商品体验
+    </div>
+    <ul class="product-list">
+      <li class="information" *ngFor="let item of recommendedProduct">
+        <img [src]="item['img']" alt="">
+        <div class="detail">
+          <div class="title">{{item['title']}}</div>
+          <div class="price">{{item['price']}}</div>
+          <div class="source">
+            <div>{{item['source']}} | {{item['time']}}</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>

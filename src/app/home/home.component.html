@@ -18,7 +18,7 @@
       推荐商品
     </div>
     <ul class="product-list">
-      <li class="information" *ngFor="let item of recommendedProduct">
+      <li class="information" *ngFor="let item of recommendedProduct" (click)="navPraiseListDetail(item)">
         <img [src]="item['praiseCover']" alt="">
         <div class="detail">
           <div class="title">{{item['title']}}</div>

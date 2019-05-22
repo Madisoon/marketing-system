@@ -1,0 +1,46 @@
+.praise-list-detail {
+  padding: 5px 10px;
+
+  img {
+    height: 260px;
+    width: 100%;
+  }
+
+  .detail {
+    padding: 5px 0;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .title {
+    line-height: 150%;
+    font: {
+      size: 1.1rem;
+      weight: bold;
+    };
+  }
+
+  .price {
+    padding: 5px 0;
+    color: #c62828;
+    font: {
+      weight: bold;
+    };
+
+    a {
+      padding: 0 2px;
+      border-radius: 2px;
+      border: 1px solid #ff1744;
+      font-size: .7rem;
+      color: #ff1744;
+    }
+  }
+
+  .content {
+    margin-top: 5px;
+    line-height: 150%;
+  }
+
+  .activity {
+    margin-top: 10px;
+  }
+}

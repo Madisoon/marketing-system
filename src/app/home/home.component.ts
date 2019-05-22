@@ -34,8 +34,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.router.navigate(['/newProduct/detail', {data: JSON.stringify(data)}]);
   }
 
-  public navGoodTextDetail(id) {
-    this.router.navigate(['/goodText/detail', {data: JSON.stringify(id)}]);
+  navGoodTextDetail(data) {
+    this.router.navigate(['/goodText/detail', {data: JSON.stringify(data)}]);
+  }
+
+  navPraiseListDetail(data) {
+    this.router.navigate(['/praiseList/detail', {data: JSON.stringify(data)}]);
   }
 
   listNewTopByTime() {

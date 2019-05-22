@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PraiseListService} from '../praise-list.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-praise-table',
@@ -44,7 +45,7 @@ export class PraiseTableComponent implements OnInit {
   praiseListLeftData: any = [];
   praiseListRightData: any = [];
 
-  constructor(private praiseListService: PraiseListService) {
+  constructor(private router: Router, private praiseListService: PraiseListService) {
   }
 
   ngOnInit() {
@@ -72,5 +73,9 @@ export class PraiseTableComponent implements OnInit {
     });
     data.status = true;
     this.listPraiseList(data.type);
+  }
+
+  goPraiseListDetail(data) {
+    this.router.navigate(['/praiseList/detail', {data: JSON.stringify(data)}]);
   }
 }

@@ -18,6 +18,6 @@ export class NewProductDetailComponent implements OnInit {
   }
 
   backPage() {
-    this.router.navigate(['../']);
+    history.go(-1);
   }
 }

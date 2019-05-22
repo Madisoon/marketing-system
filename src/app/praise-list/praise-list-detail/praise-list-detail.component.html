@@ -1,3 +1,24 @@
-<p>
-  praise-list-detail works!
-</p>
+<div class="praise-list-detail">
+  <div>
+    <mat-icon class="icon" (click)="goBack()">keyboard_arrow_left</mat-icon>
+  </div>
+  <div class="img">
+    <img [src]="praiseListDetail['praiseCover']" alt="">
+  </div>
+  <div class="title">
+    {{praiseListDetail['title']}}
+  </div>
+  <div class="detail">
+    {{praiseListDetail['source']}} | {{praiseListDetail['gmtCreate'] | date:'yyyy-MM-dd HH:mm'}} | 爆料人:商家自荐
+  </div>
+  <div class="price">
+    ¥ {{praiseListDetail['price']}}<a *ngIf="praiseListDetail['activity']"> | praiseListDetail['activity'] </a>
+  </div>
+  <div class="url">
+    <a mat-stroked-button [href]="praiseListDetail['url']">直达链接</a>
+  </div>
+  <div class="content">
+    随着天气越来越热，皮质球鞋该收起来了。买一双清爽透气的跑鞋需求迫在眉睫了，ultra boost已经购买了3双了，所以这次想试试YEEZY
+    350，刚好发布了3双限定配色。而街头上脚率最高的Yeezy当属天使和亚洲限定配色，价格也更高些，出于家庭条件考虑选择这个美限“clay”。
+  </div>
+</div>

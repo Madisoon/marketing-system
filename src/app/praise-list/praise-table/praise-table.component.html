@@ -6,7 +6,7 @@
   </ul>
   <div class="praise">
     <div class="left">
-      <div class="content" *ngFor="let item of praiseListLeftData">
+      <div class="content" *ngFor="let item of praiseListLeftData" (click)="goPraiseListDetail(item)">
         <img [src]="item['praiseCover']" alt="">
         <div class="detail">
           <div class="title">{{item.title}}</div>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="right">
-      <div class="content" *ngFor="let item of praiseListRightData">
+      <div class="content" *ngFor="let item of praiseListRightData" (click)="goPraiseListDetail(item)">
         <img [src]="item['praiseCover']" alt="">
         <div class="detail">
           <div class="title">{{item.title}}</div>

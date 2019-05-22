@@ -42,7 +42,7 @@ export class GoodTextDetailComponent implements OnInit, AfterViewInit {
   }
 
   backPage() {
-    this.router.navigate(['../']);
+    history.go(-1);
   }
 
   clickLike(id) {

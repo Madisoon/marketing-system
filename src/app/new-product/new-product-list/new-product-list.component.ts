@@ -32,6 +32,6 @@ export class NewProductListComponent implements OnInit, AfterViewInit {
   }
 
   navGoodTextDetail(data) {
-    this.router.navigate(['/newProduct/detail', {data: JSON.stringify(data)}]);
+    this.router.navigate(['/newProduct/detail', {data: data.id}]);
   }
 }

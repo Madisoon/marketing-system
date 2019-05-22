@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {PraiseListService} from '../praise-list.service';
 
 @Component({
   selector: 'app-praise-list-detail',
@@ -10,12 +11,21 @@ export class PraiseListDetailComponent implements OnInit {
 
   praiseListDetail: object = {};
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  praiseListId = '';
+
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private praiseListService: PraiseListService) {
     const valueName = 'value';
-    this.praiseListDetail = JSON.parse(this.activatedRoute.params[valueName].data);
+    this.praiseListId = this.activatedRoute.params[valueName].data;
   }
 
   ngOnInit() {
+    this.getPraiseListDetailById(this.praiseListId);
+  }
+
+  getPraiseListDetailById(id) {
+    this.praiseListService.getPraiseListDetailById(id).then((rep) => {
+      this.praiseListDetail = rep;
+    });
   }
 
   goBack() {

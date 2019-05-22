@@ -34,7 +34,7 @@ export class GoodTextListComponent implements OnInit {
     });
   }
 
-  public navGoodTextDetail(id) {
-    this.router.navigate(['/goodText/detail', {data: JSON.stringify(id)}]);
+  public navGoodTextDetail(data) {
+    this.router.navigate(['/goodText/detail', {data: data.id}]);
   }
 }

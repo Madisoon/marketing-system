@@ -76,6 +76,6 @@ export class PraiseTableComponent implements OnInit {
   }
 
   goPraiseListDetail(data) {
-    this.router.navigate(['/praiseList/detail', {data: JSON.stringify(data)}]);
+    this.router.navigate(['/praiseList/detail', {data: data.id}]);
   }
 }

@@ -8,6 +8,7 @@ import {NewProductService} from '../new-product.service';
   styleUrls: ['./new-product-detail.component.scss']
 })
 export class NewProductDetailComponent implements OnInit {
+  newProductId = '';
   newProductDetail: object = {};
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private newProductService: NewProductService) {
@@ -15,9 +16,16 @@ export class NewProductDetailComponent implements OnInit {
 
   ngOnInit() {
     const valueName = 'value';
-    this.newProductDetail = JSON.parse(this.activatedRoute.params[valueName].data);
+    this.newProductId = this.activatedRoute.params[valueName].data;
     // @ts-ignore
-    this.addEyeCount(this.newProductDetail.id);
+    this.getNewProductById(this.newProductId);
+    this.addEyeCount(this.newProductId);
+  }
+
+  getNewProductById(id) {
+    this.newProductService.getNewProductById(id).then((rep) => {
+      this.newProductDetail = rep;
+    });
   }
 
   addEyeCount(id) {

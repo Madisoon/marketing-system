@@ -31,15 +31,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   goNewProductDetail(data) {
-    this.router.navigate(['/newProduct/detail', {data: JSON.stringify(data)}]);
+    this.router.navigate(['/newProduct/detail', {data: data.id}]);
   }
 
   navGoodTextDetail(data) {
-    this.router.navigate(['/goodText/detail', {data: JSON.stringify(data)}]);
+    this.router.navigate(['/goodText/detail', {data: data.id}]);
   }
 
   navPraiseListDetail(data) {
-    this.router.navigate(['/praiseList/detail', {data: JSON.stringify(data)}]);
+    this.router.navigate(['/praiseList/detail', {data: data.id}]);
   }
 
   listNewTopByTime() {

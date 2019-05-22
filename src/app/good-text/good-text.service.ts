@@ -15,7 +15,7 @@ export class GoodTextService {
   }
 
   public getGoodTextDetail(id) {
-    return new Promise((resolve, reject) => this.httpClient.get('http://114.115.253.92:8083/marketing/listGoodText?id=' + id)
+    return new Promise((resolve, reject) => this.httpClient.get('http://114.115.253.92:8083/marketing/getGoodTextDetail?id=' + id)
       .subscribe(resolve, reject));
   }
 

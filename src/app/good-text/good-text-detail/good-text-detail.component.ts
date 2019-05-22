@@ -18,7 +18,6 @@ export class GoodTextDetailComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     const valueName = 'value';
     this.goodTextDetail = JSON.parse(this.activatedRoute.params[valueName].data);
-    console.log(this.goodTextDetail);
   }
 
   carouselLoad() {
@@ -47,7 +46,7 @@ export class GoodTextDetailComponent implements OnInit, AfterViewInit {
 
   clickLike(id) {
     this.goodTextService.clickLike(id).then(rep => {
-      console.log(rep);
+      this.goodTextDetail = rep;
     });
   }
 
